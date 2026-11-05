@@ -1,0 +1,7 @@
+.manage-users{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#201414}
+.manage-users .user-card{background:#fff;padding:1rem;border-radius:8px;margin:1rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+.manage-users .user-card h3{margin:0 0 0.5rem}
+.manage-users .user-card p{margin:0}
+.manage-users .user-card button{margin-top:0.5rem;padding:0.5rem 1rem;background:#e53e3e;color:white;border:none;border-radius:4px;cursor:pointer}
+.manage-users .user-card button:hover{background:#c53030}
+.manage-users .user-list{display:flex;flex-wrap:wrap;justify-content:center}

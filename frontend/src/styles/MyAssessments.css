@@ -1,0 +1,57 @@
+.my-assessments {
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #F7FF00;
+}
+
+.my-assessments section {
+  margin-bottom: 3rem;
+}
+
+.my-assessments h2 {
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.assessment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading {
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+.assessment-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.btn-reassign {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-remove {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-reassign:hover {
+  background-color: #45a049;
+}
+
+.btn-remove:hover {
+  background-color: #d32f2f;
+}

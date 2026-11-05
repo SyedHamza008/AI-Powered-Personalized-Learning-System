@@ -1,0 +1,142 @@
+.quiz-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+.quiz-container {
+  background: white;
+  width: 90%;
+  max-width: 700px;
+  height: 85vh;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+/* Header */
+.quiz-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+}
+
+.quiz-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #666;
+  line-height: 1;
+}
+
+.quiz-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.question-card {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.question-card h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+/* Options */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.option-btn {
+  width: 100%;
+  padding: 15px 20px;
+  text-align: left;
+  background-color: #f0f2f5;  
+  color: #333333;             
+  border: 2px solid #d1d5db;  
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.option-btn:hover:not(.disabled):not(.correct):not(.wrong) {
+  background-color: #e5e7eb; 
+  border-color: #9ca3af;
+  color: #000000;
+}
+
+/* Logic Colors */
+.option-btn.correct {
+  background-color: #d1fae5;
+  border-color: #10b981;     
+  color: #065f46;          
+  font-weight: bold;
+}
+
+.option-btn.wrong {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+  cursor: default;
+}
+
+.option-btn.disabled {
+  opacity: 0.7;
+  cursor: default;
+  background-color: #f9fafb;
+  color: #9ca3af; 
+}
+
+/* Explanation */
+.explanation-box {
+  margin-top: 15px;
+  padding: 15px;
+  background: #fff3cd;
+  border-left: 5px solid #ffc107;
+  border-radius: 4px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

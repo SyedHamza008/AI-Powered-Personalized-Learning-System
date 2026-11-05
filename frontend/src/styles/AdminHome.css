@@ -1,0 +1,313 @@
+/* AdminHome.css */
+:root {
+  --primary-color: #4a69bd;
+  --secondary-color: #6c5ce7;
+  --accent-color: #00b894;
+  --danger-color: #d63031;
+  --warning-color: #fdcb6e;
+  --dark-color: #2d3436;
+  --light-color: #dfe6e9;
+  --white: #ffffff;
+  --background: #f5f6fa;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --card-hover-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background);
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.admin-home {
+  width: 110%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Welcome Section */
+.welcome-section {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  color: var(--white);
+  box-shadow: var(--card-shadow);
+}
+
+.welcome-section h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.welcome-section p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.stat-card:hover::before {
+  transform: scaleY(1);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(74, 105, 189, 0.1);
+  border-radius: 50%;
+}
+
+.stat-content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.stat-content p {
+  font-size: 1rem;
+  color: var(--dark-color);
+  opacity: 0.8;
+}
+
+/* Dashboard Content - Adjusted for full width */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 1fr; /* Made the activity section wider */
+  gap: 2rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Quick Actions */
+.quick-actions{
+  background: var(--white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  height: 100%;
+}
+
+.quick-actions h2, .recent-activity h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.quick-actions h2::after, .recent-activity h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-radius: 3px;
+}
+
+.action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.action-buttons button {
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(74, 105, 189, 0.3);
+}
+
+/* Recent Activity - Made bigger */
+.recent-activity {
+  min-height: 400px; /* Increased minimum height */
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-list {
+  flex-grow: 1;
+  max-height: 450px; /* Increased max height */
+  overflow-y: auto;
+  padding-right: 0.5rem; /* Added padding for scrollbar */
+}
+
+.activity-item {
+  padding: 1.2rem 1rem; /* Increased padding */
+  border-left: 3px solid transparent;
+  margin-bottom: 1.2rem; /* Increased margin */
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 0 8px 8px 0;
+  transition: var(--transition);
+  font-size: 1rem; /* Increased font size */
+}
+
+.activity-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.activity-item.user {
+  border-left-color: var(--primary-color);
+}
+
+.activity-item.class {
+  border-left-color: var(--accent-color);
+}
+
+.activity-item.role {
+  border-left-color: var(--warning-color);
+}
+
+.activity-action {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.activity-time {
+  font-size: 0.9rem; /* Increased font size */
+  color: #636e72;
+}
+
+/* Scrollbar Styling */
+.activity-list::-webkit-scrollbar {
+  width: 8px; /* Made scrollbar slightly wider */
+}
+
+.activity-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.activity-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .recent-activity {
+    min-height: 350px; /* Adjusted for smaller screens */
+  }
+  
+  .activity-list {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-home {
+    padding: 1rem;
+  }
+  
+  .welcome-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .recent-activity {
+    min-height: 300px;
+  }
+}

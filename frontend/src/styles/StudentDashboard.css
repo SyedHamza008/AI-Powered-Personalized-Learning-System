@@ -1,0 +1,18 @@
+.student-dashboard {
+  display: flex;
+  height: 100vh;
+  background: #f9fafb;
+}
+
+.student-dashboard .dashboard-content {
+  background-color: black;
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.loading {
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+}

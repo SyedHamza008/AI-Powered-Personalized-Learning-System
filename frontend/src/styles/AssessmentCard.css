@@ -1,0 +1,63 @@
+.assessment-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.assessment-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.assessment-card p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.meta span {
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  color: #374151;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.start-btn,
+.result-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.start-btn {
+  background: #10b981;
+  color: white;
+}
+
+.result-btn {
+  background: #3b82f6;
+  color: white;
+}

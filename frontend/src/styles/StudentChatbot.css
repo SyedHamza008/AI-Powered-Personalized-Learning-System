@@ -1,0 +1,128 @@
+.student-chatbot {
+  display: flex;
+  flex-direction: column;
+  height: 85vh; 
+  max-height: 800px; 
+  max-width: 1000px; 
+  margin: 20px auto;
+  padding: 0; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  overflow: hidden; 
+}
+
+.chatbot-header {
+  padding: 15px;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.chatbot-header h1 {
+  color: #4a6bdf;
+  margin: 0 0 5px 0;
+  font-size: 1.4rem;
+}
+
+.chatbot-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+.chat-container {
+  flex: 1; /* Allows this to fill all remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* IMPORTANT: This allows flex children to scroll */
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.suggestions-container {
+  flex-shrink: 0; /* Prevents crushing */
+  padding: 12px 15px;
+  background-color: white;
+  border-top: 1px solid #e0e0e0;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 100px;
+  overflow-y: auto; /* Allow suggestions to scroll if there are too many */
+}
+
+.suggestion-chip {
+  background-color: #f0f4ff;
+  border: 1px solid #dbe5ff;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: #4a6bdf;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestion-chip:hover {
+  background-color: #4a6bdf;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.materials-container {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  border-left: 3px solid #4a6bdf;
+}
+
+.materials-container h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 16px;
+}
+
+.material-card {
+  margin-bottom: 12px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.material-card:last-child {
+  margin-bottom: 0;
+}
+
+.material-card h5 {
+  margin: 0 0 5px 0;
+  color: #4a6bdf;
+  font-size: 14px;
+}
+
+.material-card p {
+  margin: 0 0 8px 0;
+  font-size: 13px;
+  color: #555;
+}
+
+.material-link {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #4a6bdf;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.material-link:hover {
+  background-color: #3a5bd9;
+}

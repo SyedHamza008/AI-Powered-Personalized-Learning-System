@@ -1,0 +1,162 @@
+.insight-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.insight-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card ul li::marker {
+  content: ">";
+  margin-right: 0.5rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.insight-card h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.section h4 {
+  margin-bottom: 0.5rem;
+  color: #374151;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.section li {
+  list-style: disc;
+}
+.insight-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+}
+
+.insight-card h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #3498db;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.insight-card h3::before {
+  content: "🤖";
+  font-size: 1.2rem;
+}
+
+.section {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.section h4 {
+  color: #2c3e50;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section h4::before {
+  font-size: 1.1rem;
+}
+
+.section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section li {
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  margin: 5px 0;
+  border-left: 3px solid #3498db;
+  transition: background 0.2s;
+}
+
+.section li:hover {
+  background: #eaf7ff;
+}
+
+.section li::before {
+  content: "• ";
+  color: #3498db;
+  font-weight: bold;
+}
+
+.section p {
+  margin: 8px 0;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Highlight weak areas */
+.section h4:first-of-type::before {
+  content: "✅";
+  color: #e74c3c;
+}
+
+/* Highlight strong areas */
+.section:nth-child(3) h4::before {
+  content: "⚠️";
+  color: #2ecc71;
+}
+
+/* Highlight recommendations */
+.section:last-child h4::before {
+  content: "🎯";
+  color: #9b59b6;
+}
+
+/* Predicted score styling */
+.predicted-score {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3498db;
+  background: #ebf5fb;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 768px) {
+  .insight-card {
+    padding: 15px;
+  }
+  .section {
+    padding: 10px;
+  }
+}

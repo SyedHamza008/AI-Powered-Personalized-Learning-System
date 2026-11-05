@@ -1,0 +1,80 @@
+.teacher-sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #2c3e50, #34495e);
+  color: white;
+  padding: 20px 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.teacher-sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0 20px;
+}
+
+.teacher-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 15px;
+}
+
+.teacher-sidebar nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+/* Active link styling */
+.teacher-sidebar nav a.active {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  transform: translateX(5px);
+}
+
+/* Hover effect for links */
+.teacher-sidebar nav a:hover:not(.active) {
+  background-color: #4a6278;
+  transform: translateX(3px);
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .teacher-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 15px 0;
+  }
+  
+  .teacher-sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 10px;
+    gap: 10px;
+  }
+  
+  .teacher-sidebar nav a {
+    white-space: nowrap;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .teacher-sidebar h2 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+  }
+}

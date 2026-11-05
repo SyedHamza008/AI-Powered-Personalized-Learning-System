@@ -1,0 +1,55 @@
+.teacher-home {
+  margin-left: 33%;
+  padding: 2rem;
+}
+
+.teacher-home h1 {
+  font-size: 2.5rem;
+  color: #71f7f0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  margin: 0;
+  color: #1e40af;
+}
+
+.stat-card p {
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+.quick-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.quick-actions button {
+  padding: 0.75rem 1.5rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.quick-actions button:hover {
+  background: #2563eb;
+}

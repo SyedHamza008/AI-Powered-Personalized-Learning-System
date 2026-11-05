@@ -1,0 +1,33 @@
+.student-sidebar {
+  width: 250px;
+  background: #059669;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-sidebar h2 {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+.student-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.student-sidebar nav a {
+  color: #d1fae5;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.student-sidebar nav a:hover,
+.student-sidebar nav a.active {
+  background: #10b981;
+  color: white;
+}

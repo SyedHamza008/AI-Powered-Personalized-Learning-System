@@ -1,0 +1,116 @@
+.take-assessment {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.take-assessment h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.take-assessment p {
+  margin: 0.6rem 0;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.take-assessment hr {
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid #ecf0f1;
+}
+
+.question {
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+  background-color: #f9fbfd;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+}
+
+.question h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.25rem;
+}
+
+.question label {
+  display: block;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: #2c3e50;
+  transition: color 0.2s;
+}
+
+.question label:hover {
+  color: #3498db;
+}
+
+.question input[type="radio"] {
+  margin-right: 0.6rem;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.take-assessment button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.8rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #27ae60;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.take-assessment button:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.take-assessment button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .take-assessment {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .take-assessment h1 {
+    font-size: 1.5rem;
+  }
+
+  .question {
+    padding: 1rem;
+  }
+
+  .take-assessment button {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+.timer-banner {
+  background-color: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 1px solid #e0e0e0;
+}

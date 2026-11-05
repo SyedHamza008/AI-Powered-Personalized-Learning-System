@@ -1,0 +1,48 @@
+.loading {
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: #555;
+}
+/* AIInsights.css */
+.ai-insights {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ai-insights h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.ai-insights p {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 2rem;
+}
+
+/* Center the card(s) */
+.insights-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.insights-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px; /* Prevent card from stretching too wide */
+}
+
+/* If you later have multiple cards side-by-side on large screens */
+@media (min-width: 900px) {
+  .insights-grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,155 @@
+.teacher-materials-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-section h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.create-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.create-button:hover {
+  background-color: #3e8e41;
+}
+
+.no-materials {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+}
+
+.no-materials p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.material-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.material-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f0f8ff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.draft {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.description {
+  padding: 1rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.meta-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.meta-info span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  border-top: 1px solid #eee;
+  padding: 0.5rem 1rem;
+}
+
+.view-button, .delete-button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.view-button {
+  background: #e3f2fd;
+  color: #1976d2;
+  margin-right: 8px;
+}
+
+.view-button:hover {
+  background: #bbdefb;
+}
+
+.delete-button {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.delete-button:hover {
+  background: #ffcdd2;
+}
