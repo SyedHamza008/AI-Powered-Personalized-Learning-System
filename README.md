@@ -1,2 +1,4 @@
-# AI-Powered-Personalized-Learning-System
-This project aims to develop an AI-driven personalized learning system that adapts to students' learning styles, strengths and weaknesses.
+<b>AI-Powered-Personalized-Learning-System</b>
+An intelligent, multi-role educational platform designed to empower students through personalized, adaptive learning paths and assist educators with automated progress analytics.
+
+
